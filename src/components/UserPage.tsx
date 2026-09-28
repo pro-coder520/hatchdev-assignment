@@ -1,8 +1,10 @@
-import React from 'react'
-
 const UserPage = () => {
   return (
-    <div>UserPage</div>
+    <section className="dashboard" id="overview">
+      <div className="dashboard-intro"><div><p className="eyebrow coral-text">YOUR OVERVIEW</p><h2>Keep the good work <em>moving.</em></h2></div><button className="primary-button"><span>+</span> New project</button></div>
+      <div className="stat-grid"><article className="stat-card stat-card-highlight"><span className="stat-icon">↗</span><p>Active projects</p><strong>04</strong><small><b>+2</b> since last week</small></article><article className="stat-card"><span className="stat-icon muted-icon">◷</span><p>Hours this month</p><strong>128.5</strong><small><b>+12.4%</b> from last month</small></article><article className="stat-card"><span className="stat-icon muted-icon">✦</span><p>Tasks completed</p><strong>86</strong><small><b>+18</b> this week</small></article></div>
+      <div className="content-grid"><article className="panel activity-panel" id="activity"><div className="panel-heading"><div><p className="eyebrow">MOMENTUM</p><h3>Recent activity</h3></div><button className="text-button">View all <span>→</span></button></div><div className="activity-list"><div className="activity-row"><span className="activity-badge coral-badge">✦</span><div><strong>Project Atlas reached 80%</strong><p>You closed the final API review milestone.</p></div><time>12 min ago</time></div><div className="activity-row"><span className="activity-badge mint-badge">✓</span><div><strong>Design system v2 was shipped</strong><p>Release notes are ready to share with the team.</p></div><time>2 hrs ago</time></div><div className="activity-row"><span className="activity-badge blue-badge">↗</span><div><strong>New project space created</strong><p>Everything is ready for your next idea.</p></div><time>Yesterday</time></div></div></article><article className="panel focus-panel" id="projects"><div className="panel-heading"><div><p className="eyebrow">THIS WEEK</p><h3>Your focus</h3></div><span className="focus-date">SEP 28</span></div><div className="focus-chart"><div className="chart-line" /><span className="chart-value">72%</span></div><div className="chart-labels"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span></div><div className="focus-footer"><span>Weekly focus score</span><strong>On track</strong></div></article></div>
+    </section>
   )
 }
 

@@ -1,11 +1,18 @@
-import React from 'react'
 import UserProfile from './UserProfile'
 
 const Navbar = () => {
   return (
-    <div className="col-span-3 h-20 bg-gray-200 flex items-center justify-center">
-      <UserProfile />
-    </div>
+    <header className="topbar">
+      <div>
+        <p className="eyebrow">MONDAY, 28 SEPTEMBER 2026</p>
+        <h1>Good morning, let&apos;s make something useful.</h1>
+      </div>
+      <div className="topbar-actions">
+        <button className="icon-button" aria-label="Open notifications" title="Notifications">◎</button>
+        <span className="topbar-divider" />
+        <UserProfile compact />
+      </div>
+    </header>
   )
 }
 

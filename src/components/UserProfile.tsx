@@ -1,20 +1,16 @@
-import React from 'react'
 import { useSelector } from 'react-redux'
 import type { RootState } from '../redux/store'
 
-const UserProfile = () => {
+type UserProfileProps = { compact?: boolean }
+
+const UserProfile = ({ compact = false }: UserProfileProps) => {
   const user = useSelector((state: RootState) => state.user)
+  const initials = user.name ? user.name.split(' ').map((part) => part[0]).join('').slice(0, 2).toUpperCase() : '?'
   return (
-    <div className="p-4 flex flex-col items-center gap-2">
-      {user.name && user.email ? (
-        <>
-        
-        <p>Name: {user.name}</p>
-        <p>Email: {user.email}</p>
-        </>
-      ) : (
-        <p>No user logged in</p>
-      )}
+    <div className={`user-profile ${compact ? 'user-profile-compact' : ''}`}>
+      <span className="avatar">{initials}</span>
+      <span className="user-copy"><strong>{user.name || 'Guest user'}</strong><small>{user.email || 'Not signed in'}</small></span>
+      {compact && <span className="profile-chevron">⌄</span>}
     </div>
   )
 }
